@@ -9,5 +9,5 @@ Students are expected to:
 Student Info
 =========================
 
-* Student Name: Pham Duc Anh
+* Student Name: Phạm Đức Anh
 * Student ID: BI11-021
