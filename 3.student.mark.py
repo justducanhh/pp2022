@@ -1,7 +1,9 @@
-from student import list_student
-from course import list_course
+from etudiant import liste_des_étudiants
+from course import liste_des_courses, print_gpa
 
 
 
-list_course()
-list_student()
+
+liste_des_étudiants()
+liste_des_courses()
+print_gpa()
