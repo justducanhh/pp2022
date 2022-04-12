@@ -1,92 +1,79 @@
-list_students = []
-list_course = []
+liste_des_étudiant = []
+liste_des_course = []
 
-class person:
-    def __init__(self, name, age, dob):
-        self.name = name
-        self.age = age
-        self.dob = dob
-    def print_details(self):
-        print("Name: " + self.name)
-        print("Age: " + self.age)
-        print("DOB: " + self.dob)
-
-
-class student :
-    def __init__(self, name ,age,dob, id):
-        self.name   = name
-        self.dob    = dob
+class étudiant :
+    def __init__(self, nom ,age,ddn, id):
+        self.nom   = nom
+        self.ddn    = ddn
         self.age    = age
         self.id     = id 
 
     def print_details(self):
-        print("Student's name: " + self.name)
-        print("dob: " + self.dob)
+        print("Nom de étudiant " + self.nom)
+        print("ddn: " + self.ddn)
         print("id: " + self.id)
-        print("course: " + self.course)
+        print("age: " + self.age)
 
 class course : 
-    def __init__ (self , name , id , mark):
-        self.name = name 
-        self.id   = id
-        self.mark = mark 
+    def __init__ (self , nom , id ,notes):
+        self.nom = nom
+        self.id  = id
+        self.notes = notes
     def print_details(self):
-        print("Course name:" + self.name)
+        print("Course name:" + self.nom)
         print("Course id :" + self.id)
-        print("Student's mark:" + self.mark)
+        print("Course mark:" + self.notes)
+
         
-def input_number_of_students():
-    number_of_students = int(input("Enter number of students: "))
-    return number_of_students
+def Entrez_le_numéro_de_létudiants():
+    numbres_des_étudiants = int(input("Entrez le numéro du étudiant: "))
+    return numbres_des_étudiants
  
     
-def input_student_info():
-    number_of_students = input_number_of_students()
-    for i in range(0,number_of_students):
-        name = input("Enter student's name: ")
-        age = input("Enter student's age: ")
-        dob = input("Enter student's dob: ")
-        id = input("Enter student's id: ")
-        student_info = student(name,age,dob,id)
-        list_students.append(student_info)
+def entrez_les_informations_des_létudiant():
+    numbres_des_étudiants = Entrez_le_numéro_de_létudiants()
+    for i in range(0,numbres_des_étudiants):
+        nom = input("Entrez le nom de l'étudiant: ")
+        age = input("Entrez l'âge de l'étudiant: ")
+        ddn = input("Entrez le date de naissance: ")
+        id = input("Entrez le nom de l'étudiant: ")
+        student_info = étudiant(nom,age,ddn,id)
+        liste_des_étudiant.append(student_info)
         print("\n")
-        break
     
-def list_student():
-    for i in range(0,len(list_students)):
-        print("Student's number",i+1)
-        print("Student's name: " + list_students[i].name)
-        print("dob: " + list_students[i].dob)
-        print("id: " + list_students[i].id)
+def liste_des_étudiants():
+    for i in range(0,len(liste_des_étudiant)):
+        print("Numéro ",i+1)
+        print("Nom de l'étudiant : " + liste_des_étudiant[i].nom)
+        print("Date de naissance de l'étudiant : " + liste_des_étudiant[i].ddn)
+        print("Id de l'étudiant : " + liste_des_étudiant[i].id)
         print("\n")
-        break
     
-def input_number_of_course():
-    number_of_course = int(input("Enter number of course: "))
-    return number_of_course
+def Entrez_le_numéro_du_cours():
+    le_numéro_du_cours = int(input("Entrez le numéro du cours: "))
+    return le_numéro_du_cours
 
-def input_course_info():
-    number_of_course = input_number_of_course()
-    for i in range(0,number_of_course):
-        name = input("Enter course's name: ")
-        id  = input("Enter course's id: ")
-        mark = input("Enter course's mark: ")
-        course_info = course(name,id,mark)
-        list_course.append(course_info)
-        print("\n")
-        break 
+def entrez_les_informations_des_courses():
+    le_numéro_du_cours = Entrez_le_numéro_du_cours()
+    for i in range(0,le_numéro_du_cours):
+        nom = input("Entrez le nom du cours: ")
+        id  = input("Entrez l'identifiant du cours : ")
+        notes = input("Entrez la note du cours: ")
+        informations_du_cours= course(nom,id, notes)
+        liste_des_course.append(informations_du_cours)
+        print("\n") 
     
-def list_courses():
-    for i in range(0,len(list_course)):
-        print("Course number",i+1)
-        print("Course name: " + list_course[i].name)
-        print("Course id: " + list_course[i].id)
-        print("Course mark: " + list_course[i].mark)
+def liste_des_courses():
+    for i in range(0,len(liste_des_course)):
+        print("Numeró  ",i+1)
+        print("Le mom du course : " + liste_des_course[i].nom)
+        print("Le id du course: " + liste_des_course[i].id)
+        print("Le notes du course : " + liste_des_course[i].notes)
         print("\n")
-        break
-    
+ 
 
-input_student_info()
-input_course_info()
-list_student() 
-list_courses()
+
+entrez_les_informations_des_létudiant()
+entrez_les_informations_des_courses()
+liste_des_étudiants()
+liste_des_courses()
